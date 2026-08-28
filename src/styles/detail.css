@@ -1,0 +1,24 @@
+/* Single-provider deep-view (renderDetail): nav/steppers, header, embedded charts,
+   the web-dashboard link, and the shared summary grid. */
+.detail { display: grid; gap: 4px; }
+.detail-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.detail-back { padding: 5px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-muted); color: var(--muted); cursor: pointer; font-size: 12px; }
+.detail-back:hover { border-color: var(--accent); color: var(--accent); }
+.detail-steppers { display: inline-flex; gap: 6px; }
+.detail-prev, .detail-next { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-muted); color: var(--muted); cursor: pointer; font-size: 17px; line-height: 1; }
+.detail-prev:hover, .detail-next:hover { border-color: var(--accent); color: var(--accent); }
+.detail-head { display: flex; align-items: center; gap: 10px; margin-top: 8px; padding-bottom: 11px; border-bottom: 1px solid var(--line); }
+.detail-head > div { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.detail-head small { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.detail.error .badge { color: var(--danger); background: #f8e2de; }
+.detail.loading .badge { color: #8a651f; background: #f7ecd3; }
+.detail.disabled .badge { color: var(--muted); background: var(--surface-muted); }
+.detail .trend-charts { margin-top: 12px; }
+.detail-web { justify-self: start; margin-top: 12px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface-muted); color: inherit; cursor: pointer; font-size: 12px; }
+.detail-web:hover { border-color: var(--accent); color: var(--accent); }
+.quota small, .muted { color: var(--muted); font-size: 11px; }
+.summary { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 12px; margin: 12px 0 0; padding-top: 10px; border-top: 1px solid var(--line); }
+.summary div { min-width: 0; }
+.summary dt { color: var(--muted); font-size: 10px; }
+.summary dd { margin: 1px 0 0; font-size: 12px; font-weight: 600; overflow-wrap: anywhere; }
+.last-note { margin: 12px 0 2px; color: var(--muted); text-align: center; font-size: 10px; }

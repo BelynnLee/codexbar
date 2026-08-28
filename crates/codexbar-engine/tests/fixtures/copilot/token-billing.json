@@ -1,0 +1,17 @@
+{
+  "copilot_plan": "business",
+  "token_based_billing": true,
+  "quota_snapshots": {
+    "premium_interactions": {
+      "entitlement": 0,
+      "remaining": 0,
+      "percent_remaining": 100,
+      "quota_id": "premium_interactions"
+    },
+    "chat": {
+      "entitlement": 0,
+      "remaining": 0,
+      "quota_id": "chat"
+    }
+  }
+}

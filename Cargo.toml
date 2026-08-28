@@ -1,0 +1,41 @@
+[workspace]
+members = ["crates/codexbar-cli", "crates/codexbar-engine", "src-tauri"]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+rust-version = "1.85"
+
+[workspace.lints.rust]
+unsafe_code = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+# Deliberate baseline exceptions for protocol numeric normalization, exact fixture assertions,
+# framework-owned command signatures, and DTO shapes. All other `all`/`pedantic` lints stay strict.
+assigning_clones = "allow"
+cast_possible_truncation = "allow"
+cast_possible_wrap = "allow"
+cast_precision_loss = "allow"
+cast_sign_loss = "allow"
+cloned_ref_to_slice_refs = "allow"
+field_reassign_with_default = "allow"
+float_cmp = "allow"
+items_after_statements = "allow"
+manual_let_else = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+module_name_repetitions = "allow"
+must_use_candidate = "allow"
+needless_continue = "allow"
+needless_pass_by_value = "allow"
+return_self_not_must_use = "allow"
+similar_names = "allow"
+struct_excessive_bools = "allow"
+struct_field_names = "allow"
+too_many_lines = "allow"
+trivially_copy_pass_by_ref = "allow"
+unnecessary_wraps = "allow"
+unreadable_literal = "allow"

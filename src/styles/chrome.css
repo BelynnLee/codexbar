@@ -1,0 +1,20 @@
+/* Window chrome: title bar, window controls, and the usage/settings tab strip. */
+.topbar { flex: 0 0 auto; height: 58px; padding: 0 18px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.topbar, .topbar [data-tauri-drag-region] { cursor: default; }
+.topbar .icon-button { cursor: pointer; }
+.wordmark { font-size: 18px; font-weight: 700; letter-spacing: -0.03em; }
+.platform { margin-left: 8px; color: var(--accent); font: 700 9px/1 Consolas, monospace; letter-spacing: 0.12em; }
+.icon-button { width: 34px; height: 34px; border: 0; border-radius: 9px; background: var(--surface-muted); color: inherit; cursor: pointer; font-size: 21px; display: grid; place-items: center; line-height: 1; }
+.icon-button:hover { background: #eee7de; }
+.icon-button:disabled { opacity: 0.5; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.window-actions { display: flex; align-items: center; gap: 6px; }
+.window-actions .minimize, .window-actions .close { width: 30px; height: 30px; background: transparent; color: var(--muted); }
+.window-actions .minimize::before { content: ""; width: 12px; height: 2px; border-radius: 1px; background: currentColor; }
+.window-actions .minimize:hover { background: var(--surface-muted); color: inherit; }
+.window-actions .close { font-size: 14px; }
+.window-actions .close:hover { background: #e5484d; color: #fff; }
+.tabs { flex: 0 0 auto; display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); }
+.tabs button { padding: 10px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; }
+.tabs button.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+.content { flex: 1 1 auto; min-height: 0; padding: 14px; overflow-y: auto; }

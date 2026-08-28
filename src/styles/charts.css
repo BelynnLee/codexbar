@@ -1,0 +1,51 @@
+/* Trend charts and their controls: SVG line/area styling, reset ring, range switcher,
+   pace note, and the burn-rate projection overlay. Geometry lives in charts.ts; only
+   theming (stroke/fill colors following --provider) lives here. */
+.trend-block { margin-top: 10px; }
+.trend-toggle { padding: 3px 9px; border: 1px solid var(--line); border-radius: 7px; background: transparent; color: var(--muted); font-size: 11px; cursor: pointer; }
+.trend-toggle:hover { border-color: var(--provider); color: var(--provider); }
+.trend-note { margin: 8px 0 0; color: var(--muted); font-size: 11px; }
+.trend-charts { display: grid; gap: 10px; margin-top: 8px; }
+.trend-chart { margin: 0; }
+.trend-chart .chart { width: 100%; height: auto; display: block; }
+.trend-chart figcaption { margin-top: 3px; color: var(--muted); font-size: 10px; font-variant-numeric: tabular-nums; }
+.chart-line { stroke: var(--provider); stroke-width: 1.6; fill: none; stroke-linejoin: round; stroke-linecap: round; }
+.chart-area { fill: var(--provider); opacity: 0.1; stroke: none; }
+.chart-dot { fill: var(--provider); }
+.chart-marker { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 2; opacity: 0.55; }
+.chart-band-warn { fill: var(--warn); opacity: 0.1; }
+.chart-band-danger { fill: var(--danger); opacity: 0.12; }
+.chart-axis-label { fill: var(--muted); font-size: 6.5px; font-variant-numeric: tabular-nums; }
+.chart-grid { stroke: var(--line); stroke-width: 1; stroke-dasharray: 2 2; }
+/* Crosshair + tooltip: rendered hidden by default, shown/repositioned by main.ts's delegated
+   mousemove handler. `pointer-events: none` keeps the overlay from ever intercepting the hit-test
+   it's reacting to. */
+.chart-hover { pointer-events: none; opacity: 0; }
+.chart-hover[data-active="true"] { opacity: 1; }
+.chart-hover-line { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 2; }
+.chart-hover-dot { fill: var(--surface); stroke: var(--provider); stroke-width: 1.5; }
+.chart-hover-tip-bg { fill: var(--surface); stroke: var(--line); stroke-width: 0.75; }
+.chart-hover-tip-text { fill: currentColor; font-size: 6.5px; font-variant-numeric: tabular-nums; }
+.chart-balance .chart-line { stroke: var(--positive); }
+.chart-balance .chart-area { fill: var(--positive); }
+.chart-balance .chart-dot { fill: var(--positive); }
+.chart-balance .chart-hover-dot { stroke: var(--positive); }
+.ring { width: 34px; height: 34px; display: block; }
+.ring-track { stroke: var(--surface-muted); }
+.ring-value { stroke: var(--provider); transition: stroke-dasharray 0.35s ease; }
+.ring-label { fill: var(--muted); font: 600 9px/1 "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; }
+.quota.warn .ring-value { stroke: var(--warn); }
+.quota.danger .ring-value { stroke: var(--danger); }
+@media (prefers-reduced-motion: reduce) { .ring-value { transition: none; } }
+.range-switch { display: inline-flex; gap: 2px; margin: 8px 0 2px; padding: 2px; border-radius: 8px; background: var(--surface-muted); }
+.range-option { padding: 3px 9px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); font-size: 11px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.range-option:hover { color: inherit; }
+.range-option.active { background: var(--surface); color: var(--accent); font-weight: 600; box-shadow: 0 1px 3px rgba(44, 35, 25, 0.12); }
+.pace-note { margin: 4px 0 0; font-size: 11px; font-variant-numeric: tabular-nums; }
+.pace-note.danger { color: var(--danger); }
+.pace-note.warn { color: var(--warn); }
+.pace-note.ok { color: var(--positive); }
+.chart-projection { stroke: var(--muted); stroke-width: 1.4; stroke-dasharray: 3 3; fill: none; opacity: 0.85; }
+.chart-projection-dot { stroke: var(--muted); stroke-width: 1.4; }
+.chart-projection.proj-danger, .chart-projection-dot.proj-danger { stroke: var(--danger); }
+.chart-projection.proj-ok, .chart-projection-dot.proj-ok { stroke: var(--positive); }

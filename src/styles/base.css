@@ -1,0 +1,13 @@
+/* Element resets, focus rings, the app shell root, and boot/fatal placeholders. */
+* { box-sizing: border-box; }
+html, body { height: 100vh; overflow: hidden; }
+body { margin: 0; min-width: 360px; background: var(--surface); }
+button, input, select { font: inherit; }
+button { color: inherit; }
+button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+#app { height: 100vh; display: flex; flex-direction: column; background: var(--surface); }
+.boot, .fatal { padding: 2rem; color: var(--muted); }
+code { font-family: Consolas, monospace; }

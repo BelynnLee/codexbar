@@ -1,0 +1,46 @@
+/* Provider cards on the usage tab: quota bars, badges, incident dots, warning banner,
+   and per-card credential-import affordances. */
+.provider-list { display: grid; gap: 10px; }
+.provider-empty { display: grid; gap: 10px; justify-items: center; text-align: center; padding: 34px 18px; border: 1px dashed var(--line); border-radius: 13px; background: var(--surface-muted); }
+.provider-empty strong { font-size: 14px; }
+.provider-empty p { margin: 0; max-width: 34ch; font-size: 12px; line-height: 1.5; }
+.provider-loading { text-align: center; padding: 28px 18px; }
+.provider-card { --provider: var(--accent); border: 1px solid var(--line); border-radius: 13px; padding: 13px; background: #fff; box-shadow: 0 4px 18px rgba(44, 35, 25, 0.05); }
+.provider-card.shortcut-target { outline: 3px solid rgba(189, 82, 37, 0.42); outline-offset: 2px; }
+.provider-card > header, .provider-settings > header { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.provider-title { flex: 1; min-width: 0; display: flex; gap: 10px; align-items: center; padding: 0; border: 0; background: transparent; text-align: left; cursor: pointer; }
+.provider-title span:last-child, .provider-settings header div { display: grid; gap: 2px; min-width: 0; }
+.provider-title small, .provider-settings small { color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.provider-icon { --provider: inherit; width: 34px; height: 34px; flex: 0 0 34px; display: grid; place-items: center; border-radius: 10px; color: white; background: var(--provider); font: 700 11px/1 Consolas, monospace; }
+.badge { padding: 3px 7px; border-radius: 999px; font-size: 11px; color: #26725b; background: #dcf3e9; }
+.provider-card.error .badge { color: var(--danger); background: #f8e2de; }
+.provider-card.loading .badge { color: #8a651f; background: #f7ecd3; }
+.provider-card.disabled { opacity: 0.68; }
+.provider-card.disabled .badge { color: var(--muted); background: var(--surface-muted); }
+.error-message { margin: 11px 0 0; padding: 9px 10px; color: var(--danger); background: #fff3f0; border-radius: 8px; font-size: 12px; line-height: 1.4; }
+.quota { margin-top: 12px; display: flex; align-items: center; gap: 10px; }
+.quota-main { flex: 1 1 auto; min-width: 0; }
+.quota-ring { flex: 0 0 auto; }
+.quota-label { display: flex; justify-content: space-between; font-size: 12px; }
+.quota-label strong { font-variant-numeric: tabular-nums; }
+.track { height: 6px; margin: 5px 0 4px; border-radius: 9px; overflow: hidden; background: var(--surface-muted); }
+.track span { display: block; height: 100%; border-radius: inherit; background: var(--provider); }
+.header-status { display: inline-flex; align-items: center; gap: 7px; }
+.incident-dot { width: 8px; height: 8px; border-radius: 50%; box-shadow: 0 0 0 3px rgba(201, 138, 16, 0.16); }
+.incident-dot.minor { background: var(--warn); }
+.incident-dot.major { background: var(--danger); box-shadow: 0 0 0 3px rgba(176, 68, 55, 0.18); }
+.quota.warn .track span { background: var(--warn); }
+.quota.danger .track span { background: var(--danger); }
+.quota.danger .quota-label strong { color: var(--danger); }
+.warning-banner { margin: 0 0 10px; padding: 9px 11px; border: 1px solid rgba(201, 138, 16, 0.35); border-radius: 10px; background: #fdf6e6; font-size: 12px; }
+.warning-banner strong { color: var(--warn); display: block; margin-bottom: 5px; }
+.warning-banner ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 3px; }
+.warning-banner li { display: flex; align-items: center; gap: 7px; color: var(--muted); }
+.warn-dot { width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: var(--warn); }
+.quiet-range { display: inline-flex; align-items: center; gap: 8px; }
+.oauth-account { display: flex; align-items: center; gap: 8px; }
+.oauth-account .account-label { flex: 1 1 auto; min-width: 0; }
+.oauth-account .connect-status { flex: 0 0 auto; font-size: 11px; }
+.import-credential { padding: 4px 9px; border: 1px solid var(--line); border-radius: 7px; background: transparent; color: var(--muted); cursor: pointer; white-space: nowrap; }
+.import-credential:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.import-credential:disabled { opacity: 0.5; cursor: default; }

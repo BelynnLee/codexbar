@@ -1,0 +1,20 @@
+[package]
+name = "codexbar-cli"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "codexbar"
+path = "src/main.rs"
+
+[dependencies]
+codexbar-engine = { path = "../codexbar-engine" }
+anyhow = "1"
+chrono = { version = "0.4", features = ["clock"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt-multi-thread"] }
+
+[lints]
+workspace = true

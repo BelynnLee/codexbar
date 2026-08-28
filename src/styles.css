@@ -1,0 +1,12 @@
+/* Style manifest. The former single stylesheet is split into topical partials under styles/.
+   Import order defines cascade order: tokens (variables) first, dark-theme overrides last. */
+@import "./styles/tokens.css";
+@import "./styles/base.css";
+@import "./styles/chrome.css";
+@import "./styles/providers.css";
+@import "./styles/provider-accounts.css";
+@import "./styles/cost.css";
+@import "./styles/charts.css";
+@import "./styles/detail.css";
+@import "./styles/settings.css";
+@import "./styles/theme-dark.css";

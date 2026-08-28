@@ -1,0 +1,12 @@
+{
+  "copilot_plan": "pro",
+  "quota_reset_date": "2026-08-01T00:00:00Z",
+  "monthly_quotas": {
+    "completions": "300",
+    "chat": 1000
+  },
+  "limited_user_quotas": {
+    "completions": 75,
+    "chat": "800"
+  }
+}

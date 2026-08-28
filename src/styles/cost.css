@@ -1,0 +1,26 @@
+/* Local cost-scan panel: range controls, totals, daily bars, and the per-model breakdown list. */
+.cost-panel { margin-top: 12px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface-muted); }
+.cost-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cost-controls strong { margin-right: auto; }
+.cost-controls select { padding: 4px 6px; border: 1px solid var(--line); border-radius: 7px; background: transparent; }
+.cost-totals { margin: 10px 0 6px; font-size: 12px; font-variant-numeric: tabular-nums; }
+.cost-bars { display: flex; align-items: flex-end; gap: 2px; height: 44px; }
+.cost-bar { flex: 1 1 0; min-width: 2px; border-radius: 2px 2px 0 0; background: var(--accent); opacity: 0.85; }
+.cost-skipped { display: block; margin-top: 5px; color: var(--muted); }
+.model-breakdown-block { margin-top: 10px; }
+.model-head { display: block; margin-bottom: 5px; color: var(--muted); font-size: 11px; }
+.model-breakdown { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; }
+.model-row { display: grid; grid-template-columns: minmax(0, 1fr) 84px auto; gap: 8px; align-items: center; font-size: 11px; }
+.model-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.model-bar { height: 6px; border-radius: 6px; background: var(--line); overflow: hidden; }
+.model-bar > span { display: block; height: 100%; border-radius: inherit; background: var(--accent); }
+.model-value { color: var(--muted); font-variant-numeric: tabular-nums; }
+.cost-unknown { display: block; margin-top: 6px; color: var(--muted); }
+.model-daily-block { margin-top: 10px; }
+.model-daily-bars { display: flex; align-items: flex-end; gap: 2px; height: 52px; }
+.mday-col { flex: 1 1 0; min-width: 2px; display: flex; flex-direction: column; justify-content: flex-end; gap: 1px; }
+.mday-seg { display: block; width: 100%; border-radius: 1px; min-height: 1px; }
+.model-legend { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 10px; color: var(--muted); }
+.model-legend li { display: inline-flex; align-items: center; gap: 5px; min-width: 0; max-width: 100%; }
+.model-legend .model-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.legend-swatch { width: 9px; height: 9px; flex: 0 0 9px; border-radius: 2px; }

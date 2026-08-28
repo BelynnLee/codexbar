@@ -1,0 +1,542 @@
+[
+  {
+    "id": "codex",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "oauth"],
+    "windowsStrategies": ["oauth"],
+    "liveQa": false
+  },
+  {
+    "id": "openai",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "azureopenai",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "claude",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api", "web", "cli", "oauth"],
+    "windowsStrategies": ["apiToken", "oauth", "cli", "web"],
+    "liveQa": false
+  },
+  {
+    "id": "cursor",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "cli", "web"],
+    "windowsStrategies": ["web", "localProbe"],
+    "liveQa": false
+  },
+  {
+    "id": "opencode",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "opencodego",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web", "localProbe"],
+    "liveQa": false
+  },
+  {
+    "id": "alibaba",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web", "api"],
+    "windowsStrategies": ["web", "apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "alibabatokenplan",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "factory",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api", "web", "cli"],
+    "windowsStrategies": ["apiToken", "web"],
+    "liveQa": false
+  },
+  {
+    "id": "gemini",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "antigravity",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "cli", "oauth"],
+    "windowsStrategies": ["localProbe", "cli", "oauth"],
+    "liveQa": false
+  },
+  {
+    "id": "copilot",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "oauth"],
+    "windowsStrategies": ["oauth"],
+    "liveQa": false
+  },
+  {
+    "id": "devin",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "zai",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "minimax",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "manus",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "kimi",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "kilo",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "kiro",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "cli"],
+    "windowsStrategies": ["cli"],
+    "liveQa": false
+  },
+  {
+    "id": "vertexai",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "oauth"],
+    "windowsStrategies": ["oauth"],
+    "liveQa": false
+  },
+  {
+    "id": "augment",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "jetbrains",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "cli"],
+    "windowsStrategies": ["localProbe"],
+    "liveQa": false
+  },
+  {
+    "id": "kimik2",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "moonshot",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "amp",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "t3chat",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "ollama",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web", "api"],
+    "windowsStrategies": ["web", "apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "synthetic",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "warp",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "openrouter",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "elevenlabs",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "windsurf",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web", "cli"],
+    "windowsStrategies": ["web", "localProbe"],
+    "liveQa": false
+  },
+  {
+    "id": "zed",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["localProbe"],
+    "liveQa": false
+  },
+  {
+    "id": "perplexity",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "mimo",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "doubao",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "sakana",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "abacus",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "mistral",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "deepseek",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "codebuff",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "crof",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "venice",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "commandcode",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "qoder",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "stepfun",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "web"],
+    "windowsStrategies": ["web"],
+    "liveQa": false
+  },
+  {
+    "id": "bedrock",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "grok",
+    "upstream": true,
+    "registered": false,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "cli", "web"],
+    "windowsStrategies": ["cli", "web"],
+    "liveQa": false
+  },
+  {
+    "id": "groq",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "llmproxy",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "litellm",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "deepgram",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "poe",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "chutes",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "crossmodel",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "clawrouter",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "sub2api",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "wayfinder",
+    "upstream": true,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  },
+  {
+    "id": "opencodezen",
+    "upstream": false,
+    "registered": true,
+    "maturity": "experimental",
+    "sourceModes": ["auto", "api"],
+    "windowsStrategies": ["apiToken"],
+    "liveQa": false
+  }
+]

@@ -1,0 +1,44 @@
+# Rust
+/target
+/src-tauri/target
+
+# Node / Vite
+/node_modules
+/dist
+
+# Tauri generated
+/src-tauri/gen
+
+# Editor / OS
+.DS_Store
+*.log
+.vscode/
+
+# Local cargo registry mirror override (network workaround, not for upstream)
+/.cargo/
+
+# Local Windows release output and signing overlays
+/release/
+/src-tauri/tauri.signing.conf.json
+
+# Local env / secrets
+*.env
+*.local
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.mobileprovision
+**/secrets/
+
+# Misc tooling / worktrees
+__pycache__/
+.worktrees/
+.superpowers/brainstorm/
+.superpowers/sdd/
+
+# Debug/analysis docs
+docs/*-analysis.md
+docs/.viewport-audit/
+docs/.astro/

@@ -1,0 +1,22 @@
+{
+  "name": "codexbar-windows",
+  "private": true,
+  "version": "0.1.13",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420",
+    "build": "tsc && vite build",
+    "check": "powershell -NoProfile -ExecutionPolicy Bypass -File ./Scripts/Test-ProviderParity.ps1 && node --test ./tests/auth-action-state.test.mjs ./tests/dom.test.mjs ./tests/provider-account-actions.test.mjs ./tests/store.test.mjs && tsc --noEmit",
+    "test:public-surface": "powershell -NoProfile -ExecutionPolicy Bypass -File ./Scripts/Test-PublicSurface.ps1",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.11.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.4",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0"
+  },
+  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319"
+}

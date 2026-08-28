@@ -1,0 +1,9 @@
+/* Dark-theme overrides. Imported LAST so these win over the light defaults in every partial. */
+@media (prefers-color-scheme: dark) {
+  :root { color: #f1ece5; --surface: #1f1b16; --surface-muted: #2c261e; --line: #3d352b; --muted: #aaa094; --danger: #ed806e; --warn: #e0ad3c; --positive: #4bbd8a; }
+  .provider-card, .settings-block { background: #231f19; }
+  .warning-banner { background: #322915; border-color: rgba(224, 173, 60, 0.35); }
+  input, select { color: #f1ece5; background: #1c1814; border-color: #4c4236; }
+  .icon-button:hover { background: #393127; }
+  .error-message { background: #39221e; }
+}

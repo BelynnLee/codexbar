@@ -1,0 +1,16 @@
+/* Design tokens: light-theme color variables + base document color/font.
+   The dark-theme overrides live in theme-dark.css, which is imported last. */
+:root {
+  color: #201c17;
+  background: var(--surface);
+  font-family: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+  font-synthesis: none;
+  --surface: #ffffff;
+  --surface-muted: #f5f1eb;
+  --line: #e8e0d6;
+  --muted: #746b60;
+  --accent: #bd5225;
+  --danger: #b04437;
+  --warn: #c98a10;
+  --positive: #2f9e6f;
+}
