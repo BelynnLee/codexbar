@@ -295,8 +295,7 @@ fn generate_account_id(existing: &[String]) -> String {
     use std::time::{SystemTime, UNIX_EPOCH};
     let mut seed = SystemTime::now()
         .duration_since(UNIX_EPOCH)
-        .map(|delta| delta.as_nanos() as u64)
-        .unwrap_or(1)
+        .map_or(1, |delta| delta.as_nanos() as u64)
         .max(1);
     loop {
         seed ^= seed << 13;

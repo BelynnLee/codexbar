@@ -551,7 +551,7 @@ impl ClaudeCredentialSource {
             })?;
         *bundle = updated_bundle;
         *current_artifact = artifact;
-        *current_credentials = Box::new(credentials);
+        **current_credentials = credentials;
         Ok(())
     }
 
@@ -615,9 +615,7 @@ fn oauth_credentials_available(
         });
     }
     allow_default
-        && (env::var("CODEXBAR_CLAUDE_OAUTH_TOKEN")
-            .ok()
-            .is_some_and(|value| !value.trim().is_empty())
+        && (env::var("CODEXBAR_CLAUDE_OAUTH_TOKEN").is_ok_and(|value| !value.trim().is_empty())
             || ClaudeCredentials::default_path().is_ok_and(|path| path.is_file()))
 }
 

@@ -230,7 +230,7 @@ impl CredentialSource {
             })?;
         *bundle = updated_bundle;
         *current_auth_json = auth_json;
-        *current_credentials = Box::new(credentials);
+        **current_credentials = credentials;
         Ok(())
     }
 

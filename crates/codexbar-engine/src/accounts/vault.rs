@@ -971,7 +971,7 @@ mod tests {
             ),
             Err(CredentialVaultError::DecryptionFailed)
         ));
-        assert!(fs::read(path).unwrap() == previous);
+        assert_eq!(fs::read(path).unwrap(), previous);
     }
 
     #[test]
@@ -1429,7 +1429,7 @@ mod tests {
             Err(CredentialVaultError::IdentityMismatch)
         ));
         assert!(source.exists());
-        assert!(fs::read(target).unwrap() == target_before);
+        assert_eq!(fs::read(target).unwrap(), target_before);
     }
 
     #[test]
@@ -1521,7 +1521,7 @@ mod tests {
 
         assert!(result.is_err());
         assert!(target.exists());
-        assert!(fs::read(target).unwrap() == target_before);
+        assert_eq!(fs::read(target).unwrap(), target_before);
     }
 
     #[test]

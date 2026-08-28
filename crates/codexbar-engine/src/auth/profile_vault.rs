@@ -466,7 +466,7 @@ mod tests {
             assert!(!on_disk.contains(secret));
         }
         let loaded = vault.load("acc_work").unwrap();
-        assert!(loaded.auth_json == auth.as_bytes());
+        assert_eq!(loaded.auth_json, auth.as_bytes());
         assert_eq!(loaded.identity.account_id.as_deref(), Some("acct-work"));
         assert_eq!(loaded.identity.subject.as_deref(), Some("subject-1"));
         assert_eq!(loaded.identity.email.as_deref(), Some("work@example.com"));
@@ -485,7 +485,10 @@ mod tests {
             loaded.credentials.artifact_format.as_deref(),
             Some("codex-auth-json")
         );
-        assert!(loaded.credentials.artifact.as_deref() == Some(auth.as_bytes()));
+        assert_eq!(
+            loaded.credentials.artifact.as_deref(),
+            Some(auth.as_bytes())
+        );
 
         let compatibility_debug = format!("{:?}", compatibility.load("acc_work").unwrap());
         for secret in ["secret-access", "secret-refresh"] {

@@ -369,8 +369,7 @@ fn parse_cursor_local_session(
     })?;
     let user_id = subject
         .split('|')
-        .filter(|component| !component.is_empty())
-        .next_back()
+        .rfind(|component| !component.is_empty())
         .filter(|component| {
             component.chars().all(|character| {
                 character.is_ascii_alphanumeric() || matches!(character, '.' | '_' | '-')
