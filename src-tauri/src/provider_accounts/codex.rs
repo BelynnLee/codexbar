@@ -2009,8 +2009,8 @@ impl CodexFileAdapter {
         }
 
         match (current.as_deref(), removed.as_deref()) {
-            (None, Some(bytes)) if bytes == transaction.intended_file => Ok(()),
-            (None, Some(bytes)) => {
+            (None | Some(_), Some(bytes)) if bytes == transaction.intended_file => Ok(()),
+            (None | Some(_), Some(bytes)) => {
                 transaction.displaced_auth = Some(bytes.to_vec());
                 transaction.restore_guard_auth = transaction.intended_file.clone();
                 self.advance_transaction(
@@ -2024,16 +2024,6 @@ impl CodexFileAdapter {
                 None,
             )),
             (Some(_), None) => Ok(()),
-            (Some(_), Some(bytes)) if bytes == transaction.intended_file => Ok(()),
-            (Some(_), Some(bytes)) => {
-                transaction.displaced_auth = Some(bytes.to_vec());
-                transaction.restore_guard_auth = transaction.intended_file.clone();
-                self.advance_transaction(
-                    transaction,
-                    CodexTransactionPhase::RestoreRemovedExternal,
-                )?;
-                self.restore_removed_external(transaction)
-            }
         }
     }
 
